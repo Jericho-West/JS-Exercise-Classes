@@ -153,6 +153,14 @@ class Instructor extends Lambdasian{
     this.catchPhrase = obj2.catchPhrase
   }
 }
+Instructor.prototype.demo = function (subject) {
+  return `Today we are learning about ${subject}`
+}
+Instructor.prototype.grade = function (student, subject){
+  return `${student.name} receives a perfect score on ${subject}`
+}
+
+
 /*
   TASK 5
     - Write a Student class extending Lambdasian.
