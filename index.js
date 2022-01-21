@@ -184,6 +184,17 @@ class Student extends Lambdasian{
     this.favSubjects = obj3.favSubjects
   }
 }
+Student.prototype.listSubjects = function () {
+ return `Loving ${this.favSubjects}`
+}
+
+Student.prototype.PRAssignment = function (subject) {
+  return `${this.name} has submitted a PR for ${subject}`
+}
+
+Student.prototype.sprintChallenge = function (subject) {
+return `${this.name} has begun sprint challenge on ${subject}`
+}
 
 /*
   TASK 6
