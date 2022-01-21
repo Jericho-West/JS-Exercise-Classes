@@ -176,8 +176,13 @@ Instructor.prototype.grade = function (student, subject){
         + `PRAssignment` a method that receives a subject as an argument and returns `student.name has submitted a PR for {subject}`
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
-class Student {
-   
+class Student extends Lambdasian{
+  constructor (obj3) {
+    super(obj3, obj3.name, obj3.age, obj3.location)
+    this.previousBackground = obj3.previousBackground
+    this.className = obj3.className
+    this.favSubjects = obj3.favSubjects
+  }
 }
 
 /*
