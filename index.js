@@ -47,22 +47,22 @@ class Person {
     this.age = age
     this.stomach = []
   }
+}
 
-  eat = (someFood) => {
-    if (this.stomach.length < 10) {
-      this.stomach.push(someFood)
-    }
+Person.prototype.eat = function(someFood) {
+  if (this.stomach.length < 10) {
+    this.stomach.push(someFood)
   }
+}
 
-  poop = () => {
-    for (let i = -(this.stomach.length); i < 0; i++) {
-      this.stomach.pop() 
-    }
+Person.prototype.poop = function() {
+  for (let i = -(this.stomach.length); i < 0; i++) {
+    this.stomach.pop() 
   }
+}
 
-  toString = () => {
-    return `${this.name}, ${this.age}`
-  }
+Person.prototype.toString = function() {
+  return `${this.name}, ${this.age}`
 }
 
 /*
@@ -117,8 +117,19 @@ Car.prototype.drive = function (distance) {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-  
+  constructor (obj) {
+    this.name = obj.name
+    this.age = obj.age
+    this.location = obj.location
+  }
+  speak = () => {
+    return `Hello my name is ${this.name}, I am from ${this.location}`
+  } 
 }
+Lambdasian.prototype.speak = () => {
+  return `Hello my name is ${this.name}, I am from ${this.location}`
+}
+
 
 /*
   TASK 4
