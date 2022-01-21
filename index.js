@@ -209,9 +209,22 @@ return `${this.name} has begun sprint challenge on ${subject}`
         + `standUp` a method that takes in a slack channel and returns `{name} announces to {channel}, @channel standy times!`
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
-class ProjectManager {
-   
+class ProjectManager extends Instructor {
+  constructor (obj4) {
+    super(obj4, obj4.name, obj4.age, obj4.location, obj4.specialty, obj4.favLanguage, obj4.catchPhrase)
+    this.gradClassName = obj4.gradClassName
+    this.favInstructor = obj4.favInstructor
+  }
 }
+
+ProjectManager.prototype.standUp = function (channel) {
+  return `${this.name} announces to ${channel}, @channel standy times!`
+}
+
+ProjectManager.prototype.debugsCode = function (student, subject) {
+return `${this.name} debugs ${student.name}'s code on ${subject}`
+}
+
 /*
   STRETCH PROBLEM (no tests!)
     - Extend the functionality of the Student by adding a prop called grade and setting it equal to a number between 1-100.
